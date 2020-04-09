@@ -40,7 +40,7 @@ public class Density {
             appDensity=displayMetrics.density;
             appScaleDensity=displayMetrics.scaledDensity;
 
-            
+
             //添加字体变化监听回调
             application.registerComponentCallbacks(new ComponentCallbacks() {
                 @Override
