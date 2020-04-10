@@ -19,8 +19,14 @@ import android.util.DisplayMetrics;
  *                 Density.setDensity(App.this, activity);
  * }中调用
  *
- * dp=density * px;
- * 设备的px是确定的，只要修改当前设备的density，使得density * px等于我们给定的dp值就OK了
+ *
+ *
+ * android中的dp在渲染前会将dp转为px，计算公式：
+ *   density = dpi / 160;
+ *   px = density * dp;
+ *   px = dp * (dpi / 160);
+ *   dp=px / (dpi / 160)
+ * 而dpi是根据屏幕真实的分辨率和尺寸来计算的，每个设备都可能不一样的。
  */
 public class Density {
 
